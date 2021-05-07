@@ -1,4 +1,4 @@
-from flask import Flask, request, abort
+from flask import Flask, request, abort,jsonify
 
 app = Flask(__name__)
 
@@ -16,7 +16,7 @@ def hit():
 def webhook():
     if request.method == 'POST':
         print("*****************************************************")
-        print(request.data)
+        print(jsonify(request.data))
         print("*****************************************************")
         return '', 200
     else:
