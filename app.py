@@ -16,7 +16,7 @@ def hit():
 def webhook():
     if request.method == 'POST':
         print("*****************************************************")
-        print(request)
+        print(request.data)
         print("*****************************************************")
         return '', 200
     else:
