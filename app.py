@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 kite = KiteConnect(api_key="60sdy72jltn7a949")
 
-data = kite.generate_session("f6FHBHSFcMYEdvXnu9pyjQrcll43o2ay", api_secret="cbjxfw3tek45p7thq3yywyy5gsvuc4t8")
+data = kite.generate_session("lecbn8TvDkb9WGAGkmxJpi50gE2g0z4t", api_secret="cbjxfw3tek45p7thq3yywyy5gsvuc4t8")
 kite.set_access_token(data["access_token"])
 
 @app.route('/')
