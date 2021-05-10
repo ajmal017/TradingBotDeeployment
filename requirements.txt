@@ -6,4 +6,5 @@ Werkzeug==0.11.9
 gunicorn
 kiteconnect==3.9.2
 pandas==1.2.3
+simplejson
 
