@@ -20,7 +20,7 @@ def webhook():
     print("*******************")
     if request.method == 'POST':
         print("*******************")
-        data_recieved = request.get_json(force = True)
+        data_recieved = request.data()
         print(type(data_recieved))
         return '', 200
     else:
