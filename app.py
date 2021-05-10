@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 kite = KiteConnect(api_key="60sdy72jltn7a949")
 
-data = kite.generate_session("lecbn8TvDkb9WGAGkmxJpi50gE2g0z4t", api_secret="cbjxfw3tek45p7thq3yywyy5gsvuc4t8")
+data = kite.generate_session("BJeByqU9c1FiV2XwFgKFskbG9QeYeVxY", api_secret="cbjxfw3tek45p7thq3yywyy5gsvuc4t8")
 kite.set_access_token(data["access_token"])
 
 @app.route('/')
@@ -38,10 +38,11 @@ def webhook():
         else:
             direction_LS = kite.TRANSACTION_TYPE_SELL
      
-        order_id = kite.place_order(tradingsymbol=str(data_recieved['Name']),
+
+        order_id = kite.place_order(tradingsymbol="IDEA",
                                     exchange=kite.EXCHANGE_NSE,
-                                    transaction_type= direction_LS,
-                                    quantity=int(data_recieved['contracts']),
+                                    transaction_type="BUY",
+                                    quantity=5,
                                     order_type=kite.ORDER_TYPE_MARKET,
                                     product='MIS',
                                     variety = "regular")
