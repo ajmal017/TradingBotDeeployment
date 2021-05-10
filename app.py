@@ -1,6 +1,8 @@
 from flask import Flask, request, abort
 from kiteconnect import KiteConnect
 import pandas as pd
+import json
+
 
 
 app = Flask(__name__)
@@ -21,6 +23,7 @@ def webhook():
     if request.method == 'POST':
         print("*******************")
         data_recieved = request.data
+        print(json.loads(data_recieved))
         print(type(data_recieved))
         return '', 200
     else:
