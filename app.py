@@ -22,8 +22,9 @@ def webhook():
     print("*******************")
     if request.method == 'POST':
         print("*******************")
-        data_recieved = request.data
-        print(data_recieved.decode('utf-8'))
+        data_recieved = request.data.decode('utf-8')
+        
+        print(data_recieved)
         print(type(data_recieved))
         return '', 200
     else:
