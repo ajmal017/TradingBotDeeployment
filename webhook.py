@@ -1,4 +1,6 @@
 from flask import Flask, request, abort
+import json
+
 
 app = Flask(__name__)
 
@@ -16,8 +18,8 @@ def hit():
 def webhook():
     if request.method == 'POST':
         data_recieved = request.json
-        print(data_recieved)
-        print(data_recieved['contracts'])
+        mydata = json.loads(data_recieved)
+        print(mydata)
         return '', 200
     else:
         abort(400)
