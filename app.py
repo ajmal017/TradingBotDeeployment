@@ -29,9 +29,6 @@ def webhook():
         print(type(data_recieved))
 
         return '', 200
-    else:
-        abort(400)
-
 
 if __name__ == '__main__':
     app.run(debug = True)
