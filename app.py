@@ -18,7 +18,7 @@ def hit():
 def webhook():
     if request.method == 'POST':
         data_recieved = request.get_json(force = True)
-        print(data_recieved)
+        print(type(data_recieved))
         return '', 200
     else:
         abort(400)
