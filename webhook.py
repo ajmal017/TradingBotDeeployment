@@ -15,7 +15,9 @@ def hit():
 @app.route('/webhook', methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        print(request.json)
+        data_recieved = request.json
+        print(data_recieved)
+        print(data_recieved['contracts'])
         return '', 200
     else:
         abort(400)
