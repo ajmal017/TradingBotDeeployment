@@ -27,10 +27,7 @@ def webhook():
         
         print(data_recieved)
         print(type(data_recieved))
-        final_dictionary = eval(data_recieved)
-        
-        print(final_dictionary)
-        print(type(final_dictionary))
+
         return '', 200
     else:
         abort(400)
