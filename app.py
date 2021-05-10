@@ -16,7 +16,9 @@ def hit():
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
+    print("*******************")
     if request.method == 'POST':
+        print("*******************")
         data_recieved = request.get_json(force = True)
         print(type(data_recieved))
         return '', 200
