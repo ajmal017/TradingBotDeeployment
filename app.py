@@ -23,7 +23,7 @@ def webhook():
         print("*******************")
         data_recieved =request.data.decode('utf8').replace("'", '"')
         
-        print(data_recieved)
+        print(json.loads(data_recieved))
         print(type(data_recieved))
 
         return '', 200
