@@ -28,8 +28,9 @@ def webhook():
         print("*******************")
         data_recieved =json.loads(request.data)
         
-        print(data_recieved)
-        print(type(data_recieved))
+        print(data_recieved['direction'])
+        print(data_recieved['Name'])
+        print(data_recieved['contracts'])
         
         dir = data_recieved['direction']
         if dir == "BUY":
