@@ -31,8 +31,7 @@ def webhook():
         print(data_recieved)
         print(type(data_recieved))
         
-        try:
-        
+        try:        
             order_id = kite.place_order(tradingsymbol=data_recieved['Name'],
                                         exchange=kite.EXCHANGE_NSE,
                                         transaction_type=data_recieved['direction'],
@@ -41,9 +40,9 @@ def webhook():
                                         product='MIS',
                                         variety = "regular")
         
-            print("Order placed. ID is: {}".format(order_id))
+            print("Order placed.")
         except Exception as e:
-            print(info("Order placement failed: {}".format(e.message))
+            print(e.message)
 
         return '', 200
 
