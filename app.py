@@ -6,7 +6,7 @@ import json
 
 app = Flask(__name__)
 
-logging.basicConfig(level=logging.DEBUG)
+
 kite = KiteConnect(api_key="60sdy72jltn7a949")
 
 data = kite.generate_session("35AALoqX4qEH2VbOwZal3XKAV1ukL4H7", api_secret="cbjxfw3tek45p7thq3yywyy5gsvuc4t8")
