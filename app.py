@@ -38,19 +38,19 @@ def webhook():
         print(data_recieved['contracts'])
         
         dir = data_recieved['direction']
-#         if dir == "buy":
-#             direction_LS = kite.TRANSACTION_TYPE_BUY
-#         else:
-#             direction_LS = kite.TRANSACTION_TYPE_SELL
+        if dir == "buy":
+            direction_LS = kite.TRANSACTION_TYPE_BUY
+        else:
+            direction_LS = kite.TRANSACTION_TYPE_SELL
      
 
-#         order_id = kite.place_order(tradingsymbol="IDEA",
-#                                     exchange=kite.EXCHANGE_NSE,
-#                                     transaction_type="BUY",
-#                                     quantity=5,
-#                                     order_type=kite.ORDER_TYPE_MARKET,
-#                                     product='MIS',
-#                                     variety = "regular")
+        order_id = kite.place_order(tradingsymbol="IDEA",
+                                    exchange=kite.EXCHANGE_NSE,
+                                    transaction_type="BUY",
+                                    quantity=5,
+                                    order_type=kite.ORDER_TYPE_MARKET,
+                                    product='MIS',
+                                    variety = "regular")
         
         return '', 200
 
