@@ -44,10 +44,10 @@ def webhook():
             direction_LS = kite.TRANSACTION_TYPE_SELL
      
 
-        order_id = kite.place_order(tradingsymbol="IDEA",
+        order_id = kite.place_order(tradingsymbol=data_recieved['Name'],
                                     exchange=kite.EXCHANGE_NSE,
-                                    transaction_type="BUY",
-                                    quantity=5,
+                                    transaction_type=direction_LS,
+                                    quantity=data_recieved['contracts'],
                                     order_type=kite.ORDER_TYPE_MARKET,
                                     product='MIS',
                                     variety = "regular")
