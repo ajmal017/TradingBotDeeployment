@@ -5,12 +5,18 @@ import json
 
 
 app = Flask(__name__)
-
+print("***********************************************************************")
 
 kite = KiteConnect(api_key="60sdy72jltn7a949")
+print("***********************************************************************")
 
-data = kite.generate_session("bK0GTX4f870tvVCgykCsZn2zbKVoeeVz", api_secret="cbjxfw3tek45p7thq3yywyy5gsvuc4t8")
+data = kite.generate_session("Nfn618GwAjHSIUY9JAC5TrVLL4fP2u6j", api_secret="cbjxfw3tek45p7thq3yywyy5gsvuc4t8")
+print("***********************************************************************")
 kite.set_access_token(data["access_token"])
+print("***********************************************************************")
+
+
+
 
 @app.route('/')
 def home():
