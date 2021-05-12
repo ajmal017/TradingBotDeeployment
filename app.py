@@ -11,7 +11,7 @@ app = Flask(__name__)
 kite = KiteConnect(api_key="60sdy72jltn7a949")
 print("***********************************************************************")
 
-kite.set_access_token("PQLv2JWV07OIm7IZKope4KTDJcuMcy0N")
+kite.set_access_token("1b9tm4jed5ITEDIeri3adFJb8RzuuvSS")
 print("***********************************************************************")
 
 
